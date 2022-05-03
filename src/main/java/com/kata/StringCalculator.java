@@ -2,8 +2,9 @@ package com.kata;
 
 public class StringCalculator {
     int add(String input) {
-       return StringCalculatorHandler.isInputEmpty(input) ?0:-1;
-
+        if(StringCalculatorHandler.isInputEmpty(input))  return 0;
+        if(input.length()==1) return StringCalculatorHandler.convertStringToInt(input);
+        return -1;
     }
 
 }

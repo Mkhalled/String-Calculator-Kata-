@@ -19,4 +19,20 @@ public class StringCalculatorTest {
         StringCalculator stringCalculator=new StringCalculator();
         Assert.assertEquals(0, stringCalculator.add(""));
     }
+
+    @Test
+    public void oneNumberShouldReturnItself() {
+        StringCalculator stringCalculator=new StringCalculator();
+        Assert.assertEquals(1, stringCalculator.add("1"));
+    }
+
+    @Test
+    public void stringNotSupported() {
+        StringCalculator stringCalculator=new StringCalculator();
+        try {
+            stringCalculator.add("Test");
+        } catch (IllegalArgumentException e) {
+            assertEquals("Test not allowed", e.getMessage());
+        }
+    }
 }
