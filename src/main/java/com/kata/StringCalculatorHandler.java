@@ -23,4 +23,13 @@ public class  StringCalculatorHandler {
     static String[] splitInputByDelimiter(String input) {
         return input.split(DELIMITER);
     }
+
+    static int calculateSum(String[] inputSplittedByDelimiter) {
+        int result = 0;
+        for (String token : inputSplittedByDelimiter) {
+            result += convertStringToInt(token);
+        }
+
+        return result;
+    }
 }

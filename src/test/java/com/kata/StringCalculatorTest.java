@@ -35,4 +35,9 @@ public class StringCalculatorTest {
             assertEquals("Test not allowed", e.getMessage());
         }
     }
+    @Test
+    public void twoNumbersShouldBeAdded() {
+        StringCalculator stringCalculator=new StringCalculator();
+        Assert.assertEquals(3, stringCalculator.add("2,1"));
+    }
 }
